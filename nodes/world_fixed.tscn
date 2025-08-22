@@ -2349,16 +2349,16 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
 layout_mode = 0
-offset_left = 1583.0
-offset_top = 1140.0
-offset_right = 2367.0
-offset_bottom = 1300.0
+offset_left = 1480.0
+offset_top = 888.0
+offset_right = 2264.0
+offset_bottom = 1048.0
 color = Color(0, 0, 0, 0)
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect"]
 layout_mode = 0
-offset_left = 1679.0
-offset_top = 1468.0
-offset_right = 2279.0
-offset_bottom = 1604.0
+offset_left = 1584.0
+offset_top = 1304.0
+offset_right = 2184.0
+offset_bottom = 1440.0
 color = Color(0, 0, 0, 0)

@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
-
-@onready var camera = $Camera2D
 @onready var anim = $"../AnimationPlayer"
+@onready var camera = $Camera2D
 @export var target_scene: String = "res://scenes/NextScene.tscn"
 @export var walk_speed := 100
 @export var run_speed := 200
@@ -23,7 +22,6 @@ var returning = false
 var animation_locked: bool = false   # <--- NEW
 
 func _ready() -> void:
-	anim_sprite.play("idle")
 	Fade.connect("fade_almost_finished", Callable(self, "on_fade_almost_finished"))
 	original_position = camera.position
 	animation_locked = true
@@ -101,6 +99,7 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 		animation_locked = false
 
 func on_fade_almost_finished():
+	anim_sprite.play("idle")
 	anim.play("follow")
 	await anim.animation_finished
 	animation_locked = false
