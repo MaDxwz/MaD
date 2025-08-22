@@ -1,5 +1,6 @@
-[gd_scene load_steps=39 format=3 uid="uid://ch5vgvxo0wnem"]
+[gd_scene load_steps=40 format=3 uid="uid://ch5vgvxo0wnem"]
 
+[ext_resource type="Script" uid="uid://lsaygj8it4na" path="res://code/mainscene.gd" id="1_robms"]
 [ext_resource type="Texture2D" uid="uid://brtu5yae8ayh4" path="res://assests/Tiles/Tile_set.png" id="2_robms"]
 [ext_resource type="PackedScene" uid="uid://7b2makpfmpmp" path="res://nodes/bg2.tscn" id="3_3vnk7"]
 [ext_resource type="Script" uid="uid://cq4b5txxs121v" path="res://code/mc.gd" id="4_6e7yi"]
@@ -859,7 +860,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer/ColorRect:color")
+tracks/2/path = NodePath("mainscene/ColorRect:color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -871,7 +872,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer/ColorRect2:color")
+tracks/3/path = NodePath("mainscene/ColorRect2:color")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -927,7 +928,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:color")
+tracks/1/path = NodePath("mainscene/ColorRect:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -939,7 +940,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer/ColorRect2:color")
+tracks/2/path = NodePath("mainscene/ColorRect2:color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -957,6 +958,7 @@ _data = {
 }
 
 [node name="game" type="Node2D"]
+script = ExtResource("1_robms")
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_n3w8o")
@@ -1046,18 +1048,18 @@ shape = SubResource("RectangleShape2D_epsbd")
 position = Vector2(1478, 423)
 shape = SubResource("RectangleShape2D_robms")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="mainscene" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_aoasw")
 }
 
-[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+[node name="ColorRect" type="ColorRect" parent="mainscene"]
 offset_top = 376.0
 offset_right = 576.0
 offset_bottom = 440.0
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="AnimationPlayer"]
+[node name="ColorRect2" type="ColorRect" parent="mainscene"]
 offset_top = 640.0
 offset_right = 576.0
 offset_bottom = 704.0
