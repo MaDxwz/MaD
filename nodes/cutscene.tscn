@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfaaabxwnweah"]
+
+[ext_resource type="Script" uid="uid://bg3h0y6dqw0dy" path="res://code/story.gd" id="1_2up6v"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2up6v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 1152.0
+offset_bottom = 568.0
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 1152.0
+offset_bottom = 96.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 568.0
+offset_right = 1152.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 3.0

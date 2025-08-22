@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://bopni6qd1hgk4"]
+
+[ext_resource type="Script" uid="uid://cq4b5txxs121v" path="res://code/mc.gd" id="1_k0nl1"]
+[ext_resource type="Texture2D" path="res://assests/player/AnimationSheet_Character.png" id="2_eakja"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7hbx"]
+radius = 6.0
+height = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u06pl"]
+atlas = ExtResource("2_eakja")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5ut1"]
+atlas = ExtResource("2_eakja")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bngq7"]
+atlas = ExtResource("2_eakja")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekt1y"]
+atlas = ExtResource("2_eakja")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_351hc"]
+atlas = ExtResource("2_eakja")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hvds"]
+atlas = ExtResource("2_eakja")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg28m"]
+atlas = ExtResource("2_eakja")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpdni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u06pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5ut1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bngq7")
+}],
+"loop": true,
+"name": &"run",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekt1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_351hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hvds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eg28m")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="testplayer" type="CharacterBody2D"]
+script = ExtResource("1_k0nl1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14)
+shape = SubResource("CapsuleShape2D_m7hbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.18359, 0.18359, 0.18359, 1)
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_qpdni")
+animation = &"run"
+frame_progress = 0.438251

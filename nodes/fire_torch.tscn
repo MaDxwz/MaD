@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bp6qqatp4agd4"]
+
+[ext_resource type="Texture2D" uid="uid://cws12adb5idbo" path="res://assests/Tiles/fire-ground.png" id="1_ucncg"]
+[ext_resource type="Script" uid="uid://b71ulma5idw2q" path="res://code/fire_torch.gd" id="1_xvmi8"]
+[ext_resource type="Texture2D" uid="uid://c2rlumhr88hr3" path="res://assests/player/light.png" id="3_xvmi8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmw5v"]
+atlas = ExtResource("1_ucncg")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beb76"]
+atlas = ExtResource("1_ucncg")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhcl2"]
+atlas = ExtResource("1_ucncg")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mu1xd"]
+atlas = ExtResource("1_ucncg")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul2s6"]
+atlas = ExtResource("1_ucncg")
+region = Rect2(256, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_are83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmw5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beb76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhcl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mu1xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul2s6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="fire torch" type="Node2D"]
+position = Vector2(79, 69)
+script = ExtResource("1_xvmi8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(0.375, 0.40625)
+sprite_frames = SubResource("SpriteFrames_are83")
+autoplay = "default"
+frame_progress = 0.0927524
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.701961, 0.278431, 1)
+energy = 4.0
+texture = ExtResource("3_xvmi8")

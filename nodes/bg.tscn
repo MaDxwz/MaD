@@ -1,0 +1,309 @@
+[gd_scene load_steps=34 format=3 uid="uid://doxmogv7i3c0t"]
+
+[ext_resource type="Script" uid="uid://byvj4nesce324" path="res://code/parallax_background.gd" id="1_abkow"]
+[ext_resource type="Texture2D" uid="uid://bj8xiw3yd4sjm" path="res://assests/backgrounds/3/1.png" id="2_ofmdo"]
+[ext_resource type="Texture2D" uid="uid://dm8g4y1niril" path="res://assests/backgrounds/3/2.png" id="3_j2y4q"]
+[ext_resource type="Texture2D" uid="uid://dcb5twmw5vrv7" path="res://assests/backgrounds/3/3.png" id="4_d82bh"]
+[ext_resource type="FontFile" uid="uid://crkm68345hhsi" path="res://assests/others/Merchant Copy.ttf" id="4_ms07y"]
+[ext_resource type="Texture2D" uid="uid://cfq5cfthhvcbe" path="res://assests/backgrounds/3/4.png" id="5_rhmmc"]
+[ext_resource type="PackedScene" uid="uid://bsofk6175dqvm" path="res://nodes/light.tscn" id="7_j0jmk"]
+[ext_resource type="Texture2D" uid="uid://dyvxtatrlwb45" path="res://assests/others/New Piskel.png" id="9_ofoi8"]
+[ext_resource type="PackedScene" uid="uid://bopni6qd1hgk4" path="res://nodes/mcm.tscn" id="9_sxad5"]
+[ext_resource type="Script" uid="uid://5n7kr8b7vd12" path="res://code/fade2.gd" id="10_7gk2p"]
+[ext_resource type="AudioStream" uid="uid://btvd27flg87qt" path="res://assests/others/calming-rain-257596.mp3" id="11_dj6rp"]
+
+[sub_resource type="Gradient" id="Gradient_2rbqi"]
+offsets = PackedFloat32Array(0, 0.996016, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.716296, 0.716296, 0.716296, 1, 0.728822, 0.728822, 0.728822, 0.670588)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_85g0j"]
+gradient = SubResource("Gradient_2rbqi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k3ncb"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(600, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0.1, 1, 0)
+spread = 0.0
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.7
+color = Color(1, 1, 1, 0.701961)
+color_ramp = SubResource("GradientTexture1D_85g0j")
+collision_mode = 2
+collision_use_scale = true
+sub_emitter_mode = 3
+sub_emitter_amount_at_collision = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ms07y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kjgs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gk2p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj6rp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a23ai"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dg2c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iokjy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abm2n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpo3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5clpb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sj5b4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a0id"]
+size = Vector2(112, 46)
+
+[sub_resource type="Animation" id="Animation_ra10n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rain:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
+
+[sub_resource type="Animation" id="Animation_g0w1m"]
+resource_name = "fade.in"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rain:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.0, -20.0]
+}
+
+[sub_resource type="Animation" id="Animation_o0a0w"]
+resource_name = "fade.out"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rain:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.0, -20.0]
+}
+
+[sub_resource type="Animation" id="Animation_0p8q0"]
+resource_name = "long.fade"
+length = 5.0
+
+[sub_resource type="Animation" id="Animation_713gs"]
+resource_name = "long.fade2"
+length = 5.0
+
+[sub_resource type="Animation" id="Animation_ptm7v"]
+resource_name = "long.fade3"
+length = 7.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ra10n"]
+_data = {
+&"RESET": SubResource("Animation_ra10n"),
+&"fade.in": SubResource("Animation_g0w1m"),
+&"fade.out": SubResource("Animation_o0a0w"),
+&"long.fade": SubResource("Animation_0p8q0"),
+&"long.fade2": SubResource("Animation_713gs"),
+&"long.fade3": SubResource("Animation_ptm7v")
+}
+
+[node name="Bg" type="ParallaxBackground"]
+layer = 0
+script = ExtResource("1_abkow")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+modulate = Color(0.158472, 0.158472, 0.158472, 1)
+motion_scale = Vector2(0.05, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 322.5)
+scale = Vector2(2, 1.99074)
+texture = ExtResource("2_ofmdo")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+modulate = Color(0.158472, 0.158472, 0.158472, 1)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_j2y4q")
+centered = false
+
+[node name="text" type="Node2D" parent="."]
+modulate = Color(0.158472, 0.158472, 0.158472, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="text"]
+modulate = Color(0.233925, 0.233925, 0.233925, 1)
+texture_filter = 2
+offset_top = 16.0
+offset_right = 1152.0
+offset_bottom = 392.0
+theme_override_fonts/normal_font = ExtResource("4_ms07y")
+theme_override_font_sizes/normal_font_size = 200
+text = "AFTER       DARK"
+
+[node name="Label" type="Label" parent="text"]
+self_modulate = Color(0.0646966, 0.0646965, 0.0646965, 1)
+texture_filter = 2
+offset_left = 424.0
+offset_top = 48.0
+offset_right = 776.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("4_ms07y")
+theme_override_font_sizes/font_size = 25
+text = "WHEREVER YOU GO THERE WILL BE DARKNESS"
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+modulate = Color(0.158472, 0.158472, 0.158472, 1)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer3"]
+self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
+position = Vector2(576, 321.975)
+scale = Vector2(2, 2.0125)
+texture = ExtResource("4_d82bh")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.158472, 0.158472, 0.158472, 1)
+position = Vector2(536, -24)
+amount = 1000
+texture = ExtResource("9_ofoi8")
+lifetime = 7.0
+preprocess = 3.0
+speed_scale = 6.0
+fixed_fps = 60
+collision_base_size = 15.0
+visibility_rect = Rect2(-250, -100, 500, 500)
+local_coords = true
+trail_enabled = true
+trail_lifetime = 0.07
+trail_sections = 7
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_k3ncb")
+
+[node name="play" type="Button" parent="."]
+modulate = Color(0.0475577, 0.0475577, 0.0475576, 1)
+texture_filter = 2
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 384.0
+theme_override_colors/font_hover_pressed_color = Color(0.564036, 0.56639, 3.85046e-07, 1)
+theme_override_colors/font_hover_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_fonts/font = ExtResource("4_ms07y")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ms07y")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4kjgs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7gk2p")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_dj6rp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a23ai")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8dg2c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iokjy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_abm2n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dpo3q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5clpb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sj5b4")
+text = "PLAY"
+
+[node name="quit" type="Button" parent="."]
+modulate = Color(0.0475577, 0.0475577, 0.0475576, 1)
+texture_filter = 2
+offset_left = 512.0
+offset_top = 408.0
+offset_right = 640.0
+offset_bottom = 472.0
+theme_override_colors/font_hover_pressed_color = Color(0.564036, 0.56639, 3.85046e-07, 1)
+theme_override_colors/font_hover_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_fonts/font = ExtResource("4_ms07y")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ms07y")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4kjgs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7gk2p")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_dj6rp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a23ai")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8dg2c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iokjy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_abm2n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dpo3q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5clpb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sj5b4")
+text = "QUIT"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 353)
+shape = SubResource("RectangleShape2D_8a0id")
+
+[node name="test player" parent="StaticBody2D" instance=ExtResource("9_sxad5")]
+position = Vector2(529, 329)
+script = null
+
+[node name="light" parent="." instance=ExtResource("7_j0jmk")]
+position = Vector2(840, 128)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+modulate = Color(0.158472, 0.158472, 0.158472, 1)
+motion_scale = Vector2(1.5, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer"]
+self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
+scale = Vector2(2.01389, 2)
+texture = ExtResource("5_rhmmc")
+centered = false
+
+[node name="fade2" type="CanvasLayer" parent="."]
+script = ExtResource("10_7gk2p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fade2"]
+libraries = {
+&"": SubResource("AnimationLibrary_ra10n")
+}
+
+[node name="rain" type="AudioStreamPlayer2D" parent="fade2"]
+stream = ExtResource("11_dj6rp")
+volume_db = 3.0
+autoplay = true
+
+[connection signal="pressed" from="play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
