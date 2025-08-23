@@ -6,16 +6,12 @@ extends Node2D
 @onready var anim: AnimatedSprite2D = $player/AnimatedSprite2D
 
 func _ready() -> void:
-	player.animation_locked = true 
+	player.animation_locked = true
 	fade_player.play("fade2")
 	await zoom_camera(Vector2(4, 4), 0.1)  # zoom in over 0.5s
 	anim.play("fell")
-	
 	await anim.animation_finished
-
-	# --- Start zooming back to normal after fell ---
-	zoom_camera(Vector2(2, 2), 5)  # zoom out over 0.5s
-
+	zoom_camera(Vector2(2, 2), 5)  
 	anim.play("up")
 	await anim.animation_finished
 	anim.play("idle")

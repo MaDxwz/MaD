@@ -22,7 +22,6 @@ var returning = false
 var animation_locked: bool = false   # <--- NEW
 
 func _ready() -> void:
-	Fade.connect("fade_almost_finished", Callable(self, "on_fade_almost_finished"))
 	original_position = camera.position
 	animation_locked = true
 	await Fade.fade_long4()
