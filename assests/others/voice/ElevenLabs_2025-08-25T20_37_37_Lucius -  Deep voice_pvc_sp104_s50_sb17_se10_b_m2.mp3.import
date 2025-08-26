@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2ddrm1en6np5"
+path="res://.godot/imported/ElevenLabs_2025-08-25T20_37_37_Lucius -  Deep voice_pvc_sp104_s50_sb17_se10_b_m2.mp3-980a112d69eda0e8c44dd6d296f6d3e2.mp3str"
+
+[deps]
+
+source_file="res://assests/others/voice/ElevenLabs_2025-08-25T20_37_37_Lucius -  Deep voice_pvc_sp104_s50_sb17_se10_b_m2.mp3"
+dest_files=["res://.godot/imported/ElevenLabs_2025-08-25T20_37_37_Lucius -  Deep voice_pvc_sp104_s50_sb17_se10_b_m2.mp3-980a112d69eda0e8c44dd6d296f6d3e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
