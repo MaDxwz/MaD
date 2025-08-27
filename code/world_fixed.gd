@@ -6,6 +6,7 @@ extends Node2D
 @onready var anim: AnimatedSprite2D = $player/AnimatedSprite2D
 
 func _ready() -> void:
+	$BG/TileMap.set_layer_enabled(3, false)
 	player.animation_locked = true
 	fade_player.play("fade2")
 	await zoom_camera(Vector2(4, 4), 0.1)  # zoom in over 0.5s
