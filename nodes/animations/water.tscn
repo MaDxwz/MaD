@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://8g6nsofk0dlx"]
+
+[ext_resource type="Texture2D" uid="uid://bufj3rfx17146" path="res://assests/Tiles/Pixel Valley Revamp/Enviroment.png" id="1_x0ovt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6crkd"]
+atlas = ExtResource("1_x0ovt")
+region = Rect2(782, 424, 46, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouvty"]
+atlas = ExtResource("1_x0ovt")
+region = Rect2(828, 424, 46, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m276"]
+atlas = ExtResource("1_x0ovt")
+region = Rect2(874, 424, 46, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8laej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6crkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouvty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1m276")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 1.25)
+scale = Vector2(1.17391, 1.04717)
+sprite_frames = SubResource("SpriteFrames_8laej")
+autoplay = "default"
+frame_progress = 0.932642

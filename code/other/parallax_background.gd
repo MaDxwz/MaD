@@ -25,7 +25,7 @@ var next_thunder_time: float = 0.0
 
 func _ready() -> void:
 	if next_scene == null:
-		next_scene = preload("res://nodes/cutscene.tscn")
+		next_scene = preload("res://nodes/animations/cutscene.tscn")
 
 	setup_lightning_flash()
 	schedule_next_lightning()

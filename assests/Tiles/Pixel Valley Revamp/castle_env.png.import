@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5m5dy6xuhyic"
-path="res://.godot/imported/castle_env.png-6d8abfa5d3960b4193a1da05892302fd.ctex"
+path="res://.godot/imported/castle_env.png-53ef3be4826879eb2d200f0f0aa83b6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Tiles/castle_env.png"
-dest_files=["res://.godot/imported/castle_env.png-6d8abfa5d3960b4193a1da05892302fd.ctex"]
+source_file="res://assests/Tiles/Pixel Valley Revamp/castle_env.png"
+dest_files=["res://.godot/imported/castle_env.png-53ef3be4826879eb2d200f0f0aa83b6f.ctex"]
 
 [params]
 

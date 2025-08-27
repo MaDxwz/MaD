@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://drflivwsi7luf"]
 
-[ext_resource type="PackedScene" uid="uid://doxmogv7i3c0t" path="res://nodes/backgrounds/bg.tscn" id="2_x6s15"]
+[ext_resource type="PackedScene" uid="uid://doxmogv7i3c0t" path="res://nodes/backgrounds/bg.tscn" id="1_1gbx4"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -10,4 +10,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_x6s15")]
+[node name="bg" parent="." instance=ExtResource("1_1gbx4")]
