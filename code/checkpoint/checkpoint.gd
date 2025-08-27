@@ -5,7 +5,7 @@ extends Node2D
 @onready var light = $PointLight2D
 var camera: Camera2D
 var original_zoom: Vector2 = Vector2(2, 2)
-var target_zoom: Vector2 = Vector2(0.8, 0.8)  # Final zoom out level
+var target_zoom: Vector2 = Vector2(1.5, 1.5)  # Final zoom out level
 var zoom_in_duration: float = 2.0  # Time to zoom back in smoothly
 
 # Original light (after camera) - unchanged

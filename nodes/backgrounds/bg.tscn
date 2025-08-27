@@ -1,15 +1,15 @@
 [gd_scene load_steps=36 format=3 uid="uid://doxmogv7i3c0t"]
 
-[ext_resource type="Script" uid="uid://byvj4nesce324" path="res://code/parallax_background.gd" id="1_abkow"]
+[ext_resource type="Script" uid="uid://byvj4nesce324" path="res://code/other/parallax_background.gd" id="1_abkow"]
 [ext_resource type="Texture2D" uid="uid://bj8xiw3yd4sjm" path="res://assests/backgrounds/3/1.png" id="2_ofmdo"]
 [ext_resource type="Texture2D" uid="uid://dm8g4y1niril" path="res://assests/backgrounds/3/2.png" id="3_j2y4q"]
 [ext_resource type="Texture2D" uid="uid://dcb5twmw5vrv7" path="res://assests/backgrounds/3/3.png" id="4_d82bh"]
 [ext_resource type="FontFile" uid="uid://crkm68345hhsi" path="res://assests/others/Merchant Copy.ttf" id="4_ms07y"]
 [ext_resource type="Texture2D" uid="uid://cfq5cfthhvcbe" path="res://assests/backgrounds/3/4.png" id="5_rhmmc"]
-[ext_resource type="PackedScene" uid="uid://bsofk6175dqvm" path="res://nodes/light.tscn" id="7_j0jmk"]
+[ext_resource type="PackedScene" uid="uid://bsofk6175dqvm" path="res://nodes/player/light.tscn" id="7_j0jmk"]
 [ext_resource type="Texture2D" uid="uid://dyvxtatrlwb45" path="res://assests/others/New Piskel.png" id="9_ofoi8"]
-[ext_resource type="PackedScene" uid="uid://bopni6qd1hgk4" path="res://nodes/mcm.tscn" id="9_sxad5"]
-[ext_resource type="Script" uid="uid://5n7kr8b7vd12" path="res://code/fade2.gd" id="10_7gk2p"]
+[ext_resource type="PackedScene" uid="uid://bopni6qd1hgk4" path="res://nodes/player/mcm.tscn" id="9_sxad5"]
+[ext_resource type="Script" uid="uid://5n7kr8b7vd12" path="res://code/fade/fade2.gd" id="10_7gk2p"]
 [ext_resource type="AudioStream" uid="uid://btvd27flg87qt" path="res://assests/others/calming-rain-257596.mp3" id="11_dj6rp"]
 [ext_resource type="AudioStream" uid="uid://bsavxkg0vg633" path="res://assests/others/loud-thunder-192165.mp3" id="12_a23ai"]
 [ext_resource type="AudioStream" uid="uid://ct8jqk06rnftj" path="res://assests/others/thunder-strike-wav-321628.mp3" id="13_8dg2c"]
@@ -147,8 +147,8 @@ motion_mirroring = Vector2(1152, 0)
 self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(576, 322.5)
-scale = Vector2(2, 1.99074)
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
 texture = ExtResource("2_ofmdo")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
@@ -157,7 +157,7 @@ motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
-scale = Vector2(2, 2)
+scale = Vector2(2, 1.97531)
 texture = ExtResource("3_j2y4q")
 centered = false
 
@@ -290,7 +290,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer"]
 self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
-scale = Vector2(2.01389, 2)
+scale = Vector2(2, 2)
 texture = ExtResource("5_rhmmc")
 centered = false
 
@@ -316,8 +316,8 @@ stream = ExtResource("13_8dg2c")
 volume_db = 10.302
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(1, 1, 1, 0)
 
 [connection signal="pressed" from="play" to="." method="_on_button_pressed"]

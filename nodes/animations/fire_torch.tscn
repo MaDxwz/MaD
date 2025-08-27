@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bp6qqatp4agd4"]
 
 [ext_resource type="Texture2D" uid="uid://cws12adb5idbo" path="res://assests/Tiles/fire-ground.png" id="1_ucncg"]
-[ext_resource type="Script" uid="uid://b71ulma5idw2q" path="res://code/fire_torch.gd" id="1_xvmi8"]
+[ext_resource type="Script" uid="uid://b71ulma5idw2q" path="res://code/other/fire_torch.gd" id="1_xvmi8"]
 [ext_resource type="Texture2D" uid="uid://c2rlumhr88hr3" path="res://assests/player/light.png" id="3_xvmi8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmw5v"]

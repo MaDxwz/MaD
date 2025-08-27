@@ -1,9 +1,9 @@
 [gd_scene load_steps=33 format=3 uid="uid://bmm1t0t840iik"]
 
 [ext_resource type="Texture2D" uid="uid://btp0fsg6h8gdy" path="res://assests/backgrounds/2/ChatGPT Image 12 août 2025, 13_14_16.png" id="1_gywfv"]
-[ext_resource type="Script" uid="uid://b8jnrgafkk3vx" path="res://code/falling.gd" id="2_oblqg"]
+[ext_resource type="Script" uid="uid://b8jnrgafkk3vx" path="res://code/fall/falling.gd" id="2_oblqg"]
 [ext_resource type="Texture2D" uid="uid://bdjlqtgg7w1k6" path="res://assests/player/AnimationSheet_Character.png" id="3_se61y"]
-[ext_resource type="Script" uid="uid://cbmhrjgbir81h" path="res://code/falls.gd" id="4_m1na3"]
+[ext_resource type="Script" uid="uid://cbmhrjgbir81h" path="res://code/fall/falls.gd" id="4_m1na3"]
 [ext_resource type="Texture2D" uid="uid://c2rlumhr88hr3" path="res://assests/player/light.png" id="6_gj0pe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_firup"]

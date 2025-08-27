@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://7ofno0qi3s7v"]
 
 [ext_resource type="Texture2D" uid="uid://bdjlqtgg7w1k6" path="res://assests/player/AnimationSheet_Character.png" id="1_ucwem"]
-[ext_resource type="Script" uid="uid://cq4b5txxs121v" path="res://code/mc.gd" id="1_ypcp4"]
+[ext_resource type="Script" uid="uid://cq4b5txxs121v" path="res://code/charachter/mc.gd" id="1_ypcp4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7hbx"]
 radius = 7.0

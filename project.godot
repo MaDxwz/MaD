@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.4", "Mobile")
 
 [autoload]
 
-Fade="*res://nodes/fade.tscn"
+Fade="*res://nodes/animations/fade.tscn"
 
 [display]
 

@@ -1,19 +1,18 @@
-[gd_scene load_steps=59 format=3 uid="uid://bcbipa1oq7v2p"]
+[gd_scene load_steps=58 format=3 uid="uid://bcbipa1oq7v2p"]
 
 [ext_resource type="Texture2D" uid="uid://d0iji4dvnryre" path="res://assests/Tiles/env_rock.png" id="1_3i8nl"]
 [ext_resource type="Texture2D" uid="uid://rjpk36r6tmck" path="res://assests/backgrounds/5/background1.png" id="1_qwp0f"]
 [ext_resource type="Texture2D" uid="uid://dpuqwo6xbq35r" path="res://assests/backgrounds/5/background2.png" id="2_11m1w"]
 [ext_resource type="Texture2D" uid="uid://cbpvuxs35dj3o" path="res://assests/Tiles/mainlev_build.png" id="2_qbskb"]
-[ext_resource type="Script" uid="uid://cq4b5txxs121v" path="res://code/mc.gd" id="3_kxrgp"]
 [ext_resource type="Texture2D" uid="uid://dotgdyu74034w" path="res://assests/backgrounds/5/background4a.png" id="3_utkpb"]
 [ext_resource type="Texture2D" uid="uid://dh0j783pxfg4l" path="res://assests/backgrounds/5/background4b.png" id="4_a27mw"]
 [ext_resource type="Texture2D" uid="uid://bdjlqtgg7w1k6" path="res://assests/player/AnimationSheet_Character.png" id="4_i51ln"]
-[ext_resource type="PackedScene" uid="uid://bp6qqatp4agd4" path="res://nodes/fire_torch.tscn" id="5_c3cui"]
+[ext_resource type="PackedScene" uid="uid://bp6qqatp4agd4" path="res://nodes/animations/fire_torch.tscn" id="5_c3cui"]
 [ext_resource type="Texture2D" uid="uid://ddqck7ltasg5q" path="res://assests/Tiles/TX_Village_Props.png" id="6_8ci6d"]
 [ext_resource type="Texture2D" uid="uid://5p5or4j714ac" path="res://assests/Tiles/top_far_bgrnd.png" id="7_yjepp"]
 [ext_resource type="Texture2D" uid="uid://qg076e1e28n7" path="res://assests/Tiles/props2.png" id="8_r52cm"]
 [ext_resource type="Texture2D" uid="uid://df3ub4wuvei8u" path="res://assests/Tiles/props1.png" id="11_pwk3w"]
-[ext_resource type="Script" uid="uid://b26dklrrwynml" path="res://code/checkpoint.gd" id="14_3n5wk"]
+[ext_resource type="Script" uid="uid://b26dklrrwynml" path="res://code/checkpoint/checkpoint.gd" id="14_3n5wk"]
 [ext_resource type="Texture2D" uid="uid://c2rlumhr88hr3" path="res://assests/player/light.png" id="15_f5aj7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3n5wk"]
@@ -9296,7 +9295,6 @@ shape = SubResource("CircleShape2D_5vjy0")
 
 [node name="player" type="CharacterBody2D" parent="BG"]
 position = Vector2(82, 203)
-script = ExtResource("3_kxrgp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BG/player"]
 position = Vector2(0, -14)

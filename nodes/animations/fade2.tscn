@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d3iqntpw0qb7d"]
 
-[ext_resource type="Script" uid="uid://5n7kr8b7vd12" path="res://code/fade2.gd" id="1_4xlj8"]
+[ext_resource type="Script" uid="uid://5n7kr8b7vd12" path="res://code/fade/fade2.gd" id="1_4xlj8"]
 [ext_resource type="AudioStream" uid="uid://btvd27flg87qt" path="res://assests/others/calming-rain-257596.mp3" id="2_vk1lp"]
 
 [sub_resource type="Animation" id="Animation_ra10n"]
